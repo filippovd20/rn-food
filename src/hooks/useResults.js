@@ -7,12 +7,11 @@ export default () => {
 
   const searchApi = async (searchTerm) => {
     try {
-      console.log("Hi there");
       const response = await yelp.get("/search", {
         params: {
           limit: 50,
           term: searchTerm, //term alternatively
-          location: "New York",
+          location: "Berlin, Germany, 10717",
         },
       });
       setResults(response.data.businesses);

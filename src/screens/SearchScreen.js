@@ -15,6 +15,8 @@ const SearchScreen = () => {
     });
   };
 
+  console.log(results);
+
   return (
     <View style={{flex:1}}>
       <SearchBar
@@ -25,15 +27,14 @@ const SearchScreen = () => {
         }}
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-
       <ScrollView>
         <ResultsList
-          results={filterResultsByPrice("$")}
+          results={filterResultsByPrice("€")}
           title="Cost Effective"
         />
-        <ResultsList results={filterResultsByPrice("$$")} title="Bit Pricier" />
+        <ResultsList results={filterResultsByPrice("€€")} title="Bit Pricier" />
         <ResultsList
-          results={filterResultsByPrice("$$$")}
+          results={filterResultsByPrice("€€€")}
           title="Big Spender"
         />
       </ScrollView>
