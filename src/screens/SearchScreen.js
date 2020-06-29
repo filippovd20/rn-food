@@ -15,8 +15,6 @@ const SearchScreen = () => {
     });
   };
 
-  console.log(results);
-
   return (
     <View style={{flex:1}}>
       <SearchBar
@@ -36,6 +34,10 @@ const SearchScreen = () => {
         <ResultsList
           results={filterResultsByPrice("€€€")}
           title="Big Spender"
+        />
+        <ResultsList
+          results={filterResultsByPrice("€€€€")}
+          title="Super Expensive"
         />
       </ScrollView>
     </View>
